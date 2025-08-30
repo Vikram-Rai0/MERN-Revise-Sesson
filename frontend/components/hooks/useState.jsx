@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Hooks = () => {
+const Calculator = () => {
   const [table, setTable] = useState({
     num1: "",
     num2: "",
@@ -99,4 +99,4 @@ const Hooks = () => {
   );
 };
 
-export default Hooks;
+export default Calculator;

@@ -3,8 +3,8 @@ import AppRouter from '../router/AppRouter'
 
 const App = () => {
   return (
-    <div>
-<AppRouter/>
+    <div className='bg-gray-800 text-white'>
+      <AppRouter />
     </div>
   )
 }
