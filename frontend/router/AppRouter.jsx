@@ -5,6 +5,7 @@ import Calculator from '../components/hooks/useState'
 import FirstPage from '../components/FirstPage'
 import Counter from '../components/hooks/useEffect'
 import RenderCounter from '../components/hooks/useRef'
+import ChatBox from '../components/hooks/useRef'
 
 const AppRouter = () => {
     return (
@@ -13,7 +14,7 @@ const AppRouter = () => {
             <Route path="/props" element={<Parent />} />
             <Route path="/hooks" element={<Calculator />}></Route>
             <Route path="/useffect" element={<Counter />}></Route>
-            <Route path="/useRef" element={<RenderCounter/>}></Route>
+            <Route path="/useRef" element={<ChatBox/>}></Route>
         </Routes>
     )
 }
