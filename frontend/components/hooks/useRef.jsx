@@ -19,66 +19,68 @@ import React, { useState, useRef, useEffect } from "react";
 
 
 
-// function RenderCounter() {
-//     const [count, setCount] = useState(0);
-//     const renderCount = useRef(0);
+function RenderCounter(){
+  const [count ,setCount] = useState(0);
+    const countRef = useRef(0)
+   useEffect(()=>{
+    console.log("component Renderd!");
+   })
+  function handleClick(){
 
-//     useEffect(() => {
-//         renderCount.current = renderCount.current + 1;
-//     });
-
-//     return (
-//         <div>
-//             <p>Button clicked: {count} times</p>
-//             <p>Component rendered: {renderCount.current} times</p>
-//             <button onClick={() => setCount(count + 1)}>+</button>
-//         </div>
-//     );
-// }
-// export default RenderCounter;
-
-export default function ChatBox() {
-  const [messages, setMessages] = useState(["Hello 👋", "How are you?"]);
-  const inputRef = useRef(null);
-  const chatEndRef = useRef(null);
-
-  const sendMessage = () => {
-    if (inputRef.current.value.trim() === "") return;
-    setMessages([...messages, inputRef.current.value]);
-    inputRef.current.value = "";
-  };
-
-  // Auto scroll to latest message
-  useEffect(() => {
-    chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
-
-  return (
-    <div className="p-4 max-w-sm mx-auto">
-      <div className="h-60 overflow-y-auto border rounded p-2 bg-gray-50">
-        {messages.map((msg, i) => (
-          <p key={i} className="mb-1">
-            {msg}
-          </p>
-        ))}
-        <div ref={chatEndRef} /> {/* scroll target */}
+     countRef.current+1;
+     console.log(countRef.current);
+    
+  }
+  return ( 
+    <>
+    <div className="count flex flex-col justify-center items-center gap-5">
+      <h1 className="text-4xl">{count}</h1>
+      <button onClick={handleClick} className="border-2 h-15 w-25 rounded-2xl">click!</button>
       </div>
-
-      <div className="flex mt-2">
-        <input
-          ref={inputRef}
-          type="text"
-          placeholder="Type a message..."
-          className="border p-2 flex-1 rounded"
-        />
-        <button
-          onClick={sendMessage}
-          className="ml-2 px-3 py-1 bg-blue-500 text-white rounded"
-        >
-          Send
-        </button>
-      </div>
-    </div>
+      </>
   );
 }
-// 
+export default RenderCounter;
+
+
+  // export default function ChatBox() {
+  //   const [message, setMessage] = useState([]);
+  //   const messageRef = useRef(null);
+  //   const chatEndRef = useRef();
+
+  //   function handleSubmitMessage() {
+
+  //     if (messageRef.current.value.trim() === "") return;
+  //     setMessage([...message, messageRef.current.value]);
+  //     messageRef.current.value = "";
+
+  //   }
+  //   useEffect(
+  //     () => {
+  //       chatEndRef.current?.scrollIntoView({ behavior: "smooth" })
+
+
+  //     }, [message]);
+
+  //   return (
+  //     <>
+  //       <div className="main h-70 w-100 border-white border-2  ">
+  //         <div className="chatbox h-[70%] w-full border-black border-2 overflow-y-auto 
+  //   [scrollbar-width:none] [-ms-overflow-style:none] 
+  //   [&::-webkit-scrollbar]:hidden">
+  //           {message.map((msg, i) => (
+  //             <p key={i} className="text-gray-300 text-xl gap-4">
+  //               {msg}
+  //             </p>
+  //           ))}
+  //           <div ref={chatEndRef} />
+  //         </div>
+
+  //         <div className="flex gap-4 p-4 ">
+  //           <input type="text" ref={messageRef} className="border-none hover:shadow-md bg-gray-200 text-gray-700 rounded-md h-10 w-full" />
+  //           <button onClick={handleSubmitMessage} className="border-2 border-blue-400 bg-blue-700 px-8 rounded-md  hover:bg-blue-600">Send</button>
+  //         </div>
+  //       </div>
+  //     </>
+  //   )
+  // }

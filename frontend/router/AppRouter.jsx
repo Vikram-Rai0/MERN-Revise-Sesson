@@ -14,6 +14,7 @@ const AppRouter = () => {
             <Route path="/props" element={<Parent />} />
             <Route path="/hooks" element={<Calculator />}></Route>
             <Route path="/useffect" element={<Counter />}></Route>
+            <Route path="/useRef" element={<RenderCounter />}></Route>
             <Route path="/useRef" element={<ChatBox/>}></Route>
         </Routes>
     )
