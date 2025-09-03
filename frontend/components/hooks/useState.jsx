@@ -43,8 +43,8 @@ const Calculator = () => {
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-6 rounded-2xl shadow-lg w-96">
-        <h1 className="text-2xl font-bold text-center mb-6 text-gray-700">
+      <div className="bg-gray-600 p-6 rounded-2xl shadow-lg w-96">
+        <h1 className="text-2xl font-bold text-center mb-6 text-gray-200">
           🧮 Simple Calculator
         </h1>
 
@@ -62,12 +62,12 @@ const Calculator = () => {
             name="operator"
             value={table.operator}
             onChange={handleChange}
-            className="p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 "
           >
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value="*">*</option>
-            <option value="/">/</option>
+            <option value="+" className="text-gray-700">+</option>
+            <option value="-" className="text-gray-700">-</option>
+            <option value="*" className="text-gray-700">*</option>
+            <option value="/" className="text-gray-700">/</option>
           </select>
 
           <input
