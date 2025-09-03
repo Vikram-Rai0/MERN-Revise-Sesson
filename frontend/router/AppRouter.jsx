@@ -9,7 +9,7 @@ import ChatBox from '../components/hooks/useRef'
 import ComponentA from '../components/hooks/useContext/ComponentA'
 import ComponentC from '../components/hooks/useContext/ComponentC'
 import ComponentB from '../components/hooks/useContext/ComponentB'
-
+import ToggleColor from '../components/hooks/useContext/ColorChanger.jsx/toggleColor'
 const AppRouter = () => {
     return (
         <Routes>
@@ -20,8 +20,8 @@ const AppRouter = () => {
             <Route path="/useRef" element={<RenderCounter />}></Route>
             <Route path="/useRef" element={<ChatBox />}></Route>
             <Route path="/useContext" element={<ComponentA />}></Route>
-            <Route path="/togglecolor" element={<ToggleEvent />}></Route>
-           
+            <Route path="/toggleColor" element={<ToggleColor/>}></Route>
+
 
         </Routes>
     )
