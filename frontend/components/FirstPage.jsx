@@ -8,6 +8,7 @@ const FirstPage = () => {
             <Link to="/useffect"><button className='h-10 w-20 border-1 rounded-md'>useEffect</button></Link>
             <Link to="/useRef"><button className='h-10 w-20 border-1 rounded-md'>useRef</button></Link>
             <Link to="/useContext"><button className='h-10 w-20 border-1 rounded-md'>useContext</button></Link>
+            <Link to="/toggleColor"><button className='h-10 w-20 border-1 rounded-md'>ToggleColor</button></Link>
 
         </div>
     )

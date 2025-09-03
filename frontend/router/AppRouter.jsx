@@ -20,8 +20,8 @@ const AppRouter = () => {
             <Route path="/useRef" element={<RenderCounter />}></Route>
             <Route path="/useRef" element={<ChatBox />}></Route>
             <Route path="/useContext" element={<ComponentA />}></Route>
-            {/* <Route path="/useContext" element={<ComponentB />}></Route>
-            <Route path="/useContext" element={<ComponentC />}></Route> */}
+            <Route path="/togglecolor" element={<ToggleEvent />}></Route>
+           
 
         </Routes>
     )
